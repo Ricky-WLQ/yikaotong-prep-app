@@ -427,22 +427,58 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .nav { padding:12px 20px; }
-      .hero__title { font-size:32px; }
-      .hero__subtitle { font-size:16px; padding:0 20px; }
-      .hero__buttons { flex-direction:column; gap:12px; }
-      .trust-bar { bottom:24px; }
-      .trust-bar__logos img { width:36px; height:36px; }
-      .trust-bar__logos { flex-wrap:wrap; justify-content:center; gap:12px; }
+      .nav { padding:10px 20px; }
+      .hero__badge { padding:6px 14px; font-size:13px; margin-bottom:16px; }
+      .hero__title { font-size:26px; margin-bottom:10px; line-height:1.25; }
+      .hero__subtitle { font-size:14px; padding:0 20px; margin-bottom:20px; }
+      .hero__buttons { flex-direction:column; gap:10px; }
+      .btn-primary, .btn-outline { padding:10px 24px; font-size:15px; }
+      .trust-bar { bottom:40px; gap:6px; }
+      .trust-bar__label { font-size:12px; }
+      .trust-bar__logos img { width:30px; height:30px; }
+      .trust-bar__logos { flex-wrap:wrap; justify-content:center; gap:10px; }
       .trust-bar__names { text-align:center; font-size:10px; padding:0 16px; }
-      .feature { flex-direction:column; padding:80px 24px; gap:32px; }
+      .feature { flex-direction:column; padding:56px 24px 32px; gap:16px; overflow:hidden; }
       .feature__text { flex:none; }
-      .feature__h2 { font-size:24px; }
+      .feature__h2 { font-size:20px; margin-bottom:8px; }
+      .feature__desc { font-size:13px; margin-bottom:12px; line-height:1.6; }
+      .feature__bullets { gap:8px; }
+      .feature__bullets li { font-size:13px; }
+      .step-pill { font-size:11px; padding:4px 12px; margin-bottom:12px; }
+      .feature__mockup { max-height:40vh; overflow:hidden; }
+      .browser__content { padding:16px; min-height:auto; }
+      .browser__bar { padding:8px 12px; }
+      .browser__dot { width:8px; height:8px; }
       .portal__cards { flex-direction:column; }
-      .portal-card { min-width:auto; }
+      .portal-card { min-width:auto; padding:20px; }
+      .portal-card__name { font-size:24px; }
+      .portal__title { font-size:28px; }
+      .portal__subtitle { font-size:14px; }
+      .portal__footer { font-size:11px; }
       .arrow { width:36px; height:36px; font-size:14px; }
       .arrow--left { left:12px; }
       .arrow--right { right:12px; }
+      .dots { bottom:20px; }
+    }
+    @media (max-width: 768px) and (max-height: 700px) {
+      .hero__badge { margin-bottom:10px; }
+      .hero__title { font-size:22px; margin-bottom:8px; }
+      .hero__subtitle { font-size:13px; margin-bottom:14px; }
+      .btn-primary, .btn-outline { padding:8px 20px; font-size:14px; }
+      .trust-bar { bottom:32px; gap:4px; }
+      .trust-bar__logos img { width:24px; height:24px; }
+      .trust-bar__names { font-size:9px; }
+      .feature { padding:48px 20px 24px; gap:12px; }
+      .feature__mockup { max-height:35vh; }
+      .portal__title { font-size:22px; margin-top:40px; }
+      .portal__subtitle { font-size:12px; margin-bottom:16px; }
+      .portal-card { padding:14px; }
+      .portal-card__name { font-size:20px; }
+      .portal-card__sub { font-size:13px; margin-bottom:10px; }
+      .portal-card__btn { padding:8px 20px; font-size:14px; }
+      .portal-card__url { font-size:11px; }
+      .portal__cards { gap:12px; }
+      .portal__footer { margin-top:16px; font-size:10px; line-height:1.6; }
     }
     @media (min-width:769px) and (max-width:1024px) {
       .feature { padding:0 48px; gap:40px; }
@@ -824,17 +860,17 @@
       <h2 class="portal__title">开始你的备考之旅</h2>
       <p class="portal__subtitle">选择你的考试类型，立即注册开始学习</p>
       <div class="portal__cards">
-        <a href="https://e-smarttest-kaoyanyingyu.com/" target="_blank" rel="noopener" class="portal-card portal-card--kaoyan">
-          <span class="portal-card__name">考研英语</span>
-          <span class="portal-card__sub">英语一 · 英语二</span>
-          <span class="portal-card__btn">进入平台 &rarr;</span>
-          <span class="portal-card__url">e-smarttest-kaoyanyingyu.com</span>
-        </a>
         <a href="https://www.e-smarttest-cet.com/" target="_blank" rel="noopener" class="portal-card portal-card--cet">
           <span class="portal-card__name">大学英语四六级</span>
           <span class="portal-card__sub">CET-4 · CET-6</span>
           <span class="portal-card__btn">进入平台 &rarr;</span>
           <span class="portal-card__url">www.e-smarttest-cet.com</span>
+        </a>
+        <a href="https://e-smarttest-kaoyanyingyu.com/" target="_blank" rel="noopener" class="portal-card portal-card--kaoyan">
+          <span class="portal-card__name">考研英语</span>
+          <span class="portal-card__sub">英语一 · 英语二</span>
+          <span class="portal-card__btn">进入平台 &rarr;</span>
+          <span class="portal-card__url">e-smarttest-kaoyanyingyu.com</span>
         </a>
       </div>
       <div class="portal__footer">
