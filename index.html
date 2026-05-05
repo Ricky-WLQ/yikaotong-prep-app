@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>易考通 — 服务国际传播能力建设的智能英语备考平台</title>
-  <meta name="description" content="易考通 — AI驱动的智能英语备考平台，以测诊练评全流程闭环夯实国民英语能力，覆盖大学英语四六级与考研英语，为培养具有中国情怀与国际视野、能用英语讲好中国故事的人才提供支撑。">
+  <meta name="description" content="易考通 — AI驱动的智能英语备考平台，以测诊练评全流程闭环夯实英语能力，覆盖大学英语四六级与考研英语，为培养具有中国情怀与国际视野、能用英语讲好中国故事的人才提供支撑。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -474,6 +474,15 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      /* Allow CJK to wrap naturally on small screens — keep-all causes overflow on long uninterrupted Chinese phrases */
+      .hero__title, .hero__subtitle,
+      .feature__h2, .feature__desc, .feature__bullets li,
+      .portal__title, .portal__subtitle {
+        word-break: normal;
+        line-break: auto;
+        overflow-wrap: break-word;
+      }
+      .slide { overflow: hidden; }
       .nav { padding:12px 20px; }
       .nav__brand { font-size:18px; }
       .hero { padding-top:64px; padding-bottom:200px; }
@@ -549,6 +558,15 @@
       .hero__title { font-size:60px; }
       .feature__h2 { font-size:38px; }
       .portal__title { font-size:52px; }
+      /* Allow long CJK phrases to wrap — keep-all causes overflow at iPad sizes */
+      .hero__title, .hero__subtitle,
+      .feature__h2, .feature__desc,
+      .portal__title, .portal__subtitle {
+        word-break: normal;
+        line-break: auto;
+        overflow-wrap: break-word;
+      }
+      .feature__text { min-width: 0; }
     }
 
     /* ICP filing strip — fixed bottom, hidden on portal slide */
@@ -599,7 +617,7 @@
   <div class="carousel" id="carousel">
     <div class="slide hero">
       <span class="hero__badge">服务国际传播能力建设 · AI驱动智能英语备考平台</span>
-      <h1 class="hero__title">易考通 · 国民英语智能备考平台</h1>
+      <h1 class="hero__title">易考通 · 英语智能备考平台</h1>
       <p class="hero__subtitle">测诊练评全流程闭环，覆盖考研英语与大学英语四六级，助力高校培养具有中国情怀与国际视野、能用英语讲好中国故事的复合型人才</p>
       <div class="hero__buttons">
         <button class="btn-primary" onclick="goToSlide(7)">开始使用 &rarr;</button>
